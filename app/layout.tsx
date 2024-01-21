@@ -1,4 +1,5 @@
-import '@/app/ui/global.css'
+import '@/app/ui/global.css';
+import { roboto } from '@/app/ui/fonts';
 export default function RootLayout({
   children,
 }: {
@@ -6,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning={true} className={roboto.className}>
+        {children}
+      </body>
     </html>
   );
 }
